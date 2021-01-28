@@ -1,0 +1,542 @@
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="zh-CN" class="translated-ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>IDAPro速查表</title>
+
+    <meta content="chrome=1" http-equiv="X-UA-Compatible" />
+    <link href="./bootstrap.min.css" rel="stylesheet" />
+    <link href="./css.css" rel="stylesheet" />
+    <style type="text/css">
+      body {
+        font-family: "Encode Sans", sans-serif;
+        font-size: 12px;
+        padding: 0 30px;
+      }
+      body:before {
+        content: "IDAPro cheatsheet";
+        font-size: 24px;
+        color: #067faf;
+        line-height: 4em;
+      }
+      .columns-container {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+      }
+      .columns-container table {
+        break-inside: avoid-column;
+        margin-bottom: 2em;
+        background-color: #ecf3f4;
+      }
+      .table td,
+      .table th {
+        border-top: 1px solid #dee2e6;
+      }
+      .table th {
+        color: #067faf;
+      }
+      .table td {
+        font-size: 14px;
+      }
+      .table tr td:nth-of-type(1) {
+        width: 75%;
+      }
+      @media print {
+        .columns-container {
+          -moz-column-count: 3;
+          -webkit-column-count: 3;
+          column-count: 3;
+        }
+      }
+    </style>
+    <title></title>
+  </head>
+  <body cz-shortcut-listen="true">
+    <p>IDAPro 7.4 –文档于2020年4月3日更新</p>
+    <div class="columns-container">
+      <table class="table table-sm table-striped table-cheatsheet">
+        <thead>
+          <tr>
+            <th colspan="2">文件操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>解析C头文件...</td>
+            <td><code>Ctrl+F9</code></td>
+          </tr>
+          <tr>
+            <td>创建ASM文件...</td>
+            <td><code>Alt+F10</code></td>
+          </tr>
+          <tr>
+            <td>保存</td>
+            <td><code>Ctrl+W</code></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table table-sm table-striped table-cheatsheet">
+        <thead>
+          <tr>
+            <th colspan="2">导航</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>跳转到操作数</td>
+            <td><code>Enter</code></td>
+          </tr>
+          <tr>
+            <td>跳到新视窗</td>
+            <td><code>Alt+Enter</code></td>
+          </tr>
+          <tr>
+            <td>跳到上一个位置</td>
+            <td><code>Esc</code></td>
+          </tr>
+          <tr>
+            <td>跳到下一个位置</td>
+            <td><code>Ctrl+Enter</code></td>
+          </tr>
+          <tr>
+            <td>跳转到地址...</td>
+            <td><code>G</code></td>
+          </tr>
+          <tr>
+            <td>按名称跳转...</td>
+            <td><code>Ctrl+L</code></td>
+          </tr>
+          <tr>
+            <td>跳转至功能...</td>
+            <td><code>Ctrl+P</code></td>
+          </tr>
+          <tr>
+            <td>跳转到伪代码</td>
+            <td><code>Tab</code></td>
+          </tr>
+          <tr>
+            <td>跳至区隔...</td>
+            <td><code>Ctrl+S</code></td>
+          </tr>
+          <tr>
+            <td>跳转到段寄存器...</td>
+            <td><code>Ctrl+G</code></td>
+          </tr>
+          <tr>
+            <td>跳到问题...</td>
+            <td><code>Ctrl+Q</code></td>
+          </tr>
+          <tr>
+            <td>列出对...的交叉引用</td>
+            <td><code>Ctrl+X</code></td>
+          </tr>
+          <tr>
+            <td>跳转到外部参照以操作数...</td>
+            <td><code>X</code></td>
+          </tr>
+          <tr>
+            <td>跳转到入口点...</td>
+            <td><code>Ctrl+E</code></td>
+          </tr>
+          <tr>
+            <td>标记位置...</td>
+            <td><code>Alt+M</code></td>
+          </tr>
+          <tr>
+            <td>跳到标记的位置...</td>
+            <td><code>Ctrl+M</code></td>
+          </tr>
+          <tr>
+            <td>错误操作数</td>
+            <td><code>Ctrl+F</code></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table table-sm table-striped table-cheatsheet">
+        <thead>
+          <tr>
+            <th colspan="2">搜寻</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>下一个代码</td>
+            <td><code>Alt+C</code></td>
+          </tr>
+          <tr>
+            <td>下一个数据</td>
+            <td><code>Ctrl+D</code></td>
+          </tr>
+          <tr>
+            <td>下一步探索</td>
+            <td><code>Ctrl+A</code></td>
+          </tr>
+          <tr>
+            <td>下一个未开发</td>
+            <td><code>Ctrl+U</code></td>
+          </tr>
+          <tr>
+            <td>立即价值...</td>
+            <td><code>Alt+I</code></td>
+          </tr>
+          <tr>
+            <td>下一个即时价值</td>
+            <td><code>Ctrl+I</code></td>
+          </tr>
+          <tr>
+            <td>文本...</td>
+            <td><code>Alt+T</code></td>
+          </tr>
+          <tr>
+            <td>下一个文字</td>
+            <td><code>Ctrl+T</code></td>
+          </tr>
+          <tr>
+            <td>字节序列...</td>
+            <td><code>Alt+B</code></td>
+          </tr>
+          <tr>
+            <td>下一个字节序列</td>
+            <td><code>Ctrl+B</code></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table table-sm table-striped table-cheatsheet">
+        <thead>
+          <tr>
+            <th colspan="2">编辑（数据类型–等）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>改名</td>
+            <td><code>N</code></td>
+          </tr>
+          <tr>
+            <td>输入可重复的评论...</td>
+            <td><code>;</code></td>
+          </tr>
+          <tr>
+            <td>输入评论...</td>
+            <td><code>:</code></td>
+          </tr>
+          <tr>
+            <td>开始选择</td>
+            <td><code>Alt+L</code></td>
+          </tr>
+          <tr>
+            <td>码</td>
+            <td><code>C</code></td>
+          </tr>
+          <tr>
+            <td>数据</td>
+            <td><code>D</code></td>
+          </tr>
+          <tr>
+            <td>结构变量</td>
+            <td><code>Alt+Q</code></td>
+          </tr>
+          <tr>
+            <td>串</td>
+            <td><code>A</code></td>
+          </tr>
+          <tr>
+            <td>阵列...</td>
+            <td><code>Numpad*,*</code></td>
+          </tr>
+          <tr>
+            <td>未定义</td>
+            <td><code>U</code></td>
+          </tr>
+          <tr>
+            <td>输入前线...</td>
+            <td><code>Ins</code></td>
+          </tr>
+          <tr>
+            <td>输入后线...</td>
+            <td><code>Shift+Ins</code></td>
+          </tr>
+          <tr>
+            <td>偏移量（数据段）</td>
+            <td><code>O</code></td>
+          </tr>
+          <tr>
+            <td>偏移量（当前细分）</td>
+            <td><code>Ctrl+O</code></td>
+          </tr>
+          <tr>
+            <td>偏移量（任意细分）...</td>
+            <td><code>Alt+R</code></td>
+          </tr>
+          <tr>
+            <td>偏移量（用户定义）...</td>
+            <td><code>Ctrl+R</code></td>
+          </tr>
+          <tr>
+            <td>偏移量（结构）...</td>
+            <td><code>T</code></td>
+          </tr>
+          <tr>
+            <td>号码（默认）</td>
+            <td><code>#</code></td>
+          </tr>
+          <tr>
+            <td>十六进制</td>
+            <td><code>Q</code></td>
+          </tr>
+          <tr>
+            <td>小数</td>
+            <td><code>H</code></td>
+          </tr>
+          <tr>
+            <td>二元</td>
+            <td><code>B</code></td>
+          </tr>
+          <tr>
+            <td>字符</td>
+            <td><code>R</code></td>
+          </tr>
+          <tr>
+            <td>分割</td>
+            <td><code>S</code></td>
+          </tr>
+          <tr>
+            <td>枚举成员...</td>
+            <td><code>M</code></td>
+          </tr>
+          <tr>
+            <td>堆栈变量</td>
+            <td><code>K</code></td>
+          </tr>
+          <tr>
+            <td>变更标志</td>
+            <td><code>_</code></td>
+          </tr>
+          <tr>
+            <td>按位取反</td>
+            <td><code>~</code></td>
+          </tr>
+          <tr>
+            <td>字符串文字...</td>
+            <td><code>Alt+A</code></td>
+          </tr>
+          <tr>
+            <td>设置数据类型...</td>
+            <td><code>Alt+D</code></td>
+          </tr>
+          <tr>
+            <td>编辑区隔...</td>
+            <td><code>Alt+S</code></td>
+          </tr>
+          <tr>
+            <td>更改段寄存器值...</td>
+            <td><code>Alt+G</code></td>
+          </tr>
+          <tr>
+            <td>结构变量</td>
+            <td><code>Alt+Q</code></td>
+          </tr>
+          <tr>
+            <td>选择工会会员...</td>
+            <td><code>Alt+Y</code></td>
+          </tr>
+          <tr>
+            <td>撤消</td>
+            <td><code>Ctrl+Z</code></td>
+          </tr>
+          <tr>
+            <td>重做</td>
+            <td><code>Ctrl+Shift+Z</code></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table table-sm table-striped table-cheatsheet">
+        <thead>
+          <tr>
+            <th colspan="2">打开子视图</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>本地类型</td>
+            <td><code>Shift+F1</code></td>
+          </tr>
+          <tr>
+            <td>职能</td>
+            <td><code>Shift+F3</code></td>
+          </tr>
+          <tr>
+            <td>名字</td>
+            <td><code>Shift+F4</code></td>
+          </tr>
+          <tr>
+            <td>签名</td>
+            <td><code>Shift+F5</code></td>
+          </tr>
+          <tr>
+            <td>区隔</td>
+            <td><code>Shift+F7</code></td>
+          </tr>
+          <tr>
+            <td>段寄存器</td>
+            <td><code>Shift+F8</code></td>
+          </tr>
+          <tr>
+            <td>结构体</td>
+            <td><code>Shift+F9</code></td>
+          </tr>
+          <tr>
+            <td>枚举</td>
+            <td><code>Shift+F10</code></td>
+          </tr>
+          <tr>
+            <td>类型库</td>
+            <td><code>Shift+F11</code></td>
+          </tr>
+          <tr>
+            <td>弦乐</td>
+            <td><code>Shift+F12</code></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table table-sm table-striped table-cheatsheet">
+        <thead>
+          <tr>
+            <th colspan="2">功能(函数)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>创建功能...</td>
+            <td><code>P</code></td>
+          </tr>
+          <tr>
+            <td>编辑功能...</td>
+            <td><code>Alt+P</code></td>
+          </tr>
+          <tr>
+            <td>设定功能结束</td>
+            <td><code>E</code></td>
+          </tr>
+          <tr>
+            <td>堆栈变量...</td>
+            <td><code>Ctrl+K</code></td>
+          </tr>
+          <tr>
+            <td>更改堆栈指针...</td>
+            <td><code>Alt+K</code></td>
+          </tr>
+          <tr>
+            <td>重命名注册...</td>
+            <td><code>V</code></td>
+          </tr>
+          <tr>
+            <td>设定类型...</td>
+            <td><code>Y</code></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table table-sm table-striped table-cheatsheet">
+        <thead>
+          <tr>
+            <th colspan="2">发光度</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>拉取所有元数据</td>
+            <td><code>F12</code></td>
+          </tr>
+          <tr>
+            <td>推送所有元数据</td>
+            <td><code>Ctrl+F12</code></td>
+          </tr>
+          <tr>
+            <td>查看所有元数据</td>
+            <td><code>Alt+F12</code></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table table-sm table-striped table-cheatsheet">
+        <thead>
+          <tr>
+            <th colspan="2">调试器</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>添加断点</td>
+            <td><code>F2</code></td>
+          </tr>
+          <tr>
+            <td>开始过程</td>
+            <td><code>F9</code></td>
+          </tr>
+          <tr>
+            <td>终止过程</td>
+            <td><code>Ctrl+F2</code></td>
+          </tr>
+          <tr>
+            <td>步入</td>
+            <td><code>F7</code></td>
+          </tr>
+          <tr>
+            <td>越过</td>
+            <td><code>F8</code></td>
+          </tr>
+          <tr>
+            <td>运行直到返回</td>
+            <td><code>Ctrl+F7</code></td>
+          </tr>
+          <tr>
+            <td>运行到光标</td>
+            <td><code>F4</code></td>
+          </tr>
+          <tr>
+            <td>断点清单</td>
+            <td><code>Ctrl+Alt+B</code></td>
+          </tr>
+          <tr>
+            <td>堆栈跟踪</td>
+            <td><code>Ctrl+Alt+S</code></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table table-sm table-striped table-cheatsheet">
+        <thead>
+          <tr>
+            <th colspan="2">其他（杂）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>计算器...</td>
+            <td><code>?</code></td>
+          </tr>
+          <tr>
+            <td>Windows列表（下一个）</td>
+            <td><code>Ctrl+Tab</code></td>
+          </tr>
+          <tr>
+            <td>切换至窗口＃1…9</td>
+            <td><code>Alt+1…9</code></td>
+          </tr>
+          <tr>
+            <td>关闭窗口</td>
+            <td><code>Alt+F3</code></td>
+          </tr>
+          <tr>
+            <td>脚本命令...</td>
+            <td><code>Shift+F2</code></td>
+          </tr>
+          <tr>
+            <td>出口</td>
+            <td><code>Alt+X</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
